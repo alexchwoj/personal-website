@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    background-color: #0a0809;
+}
+
+.cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid red;
+    
+    transform: translate(-50%, -50%) translate(var(--x, 0px), var(--y, 0px));
+}
