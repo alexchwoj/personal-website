@@ -37,7 +37,7 @@
 	>
 		<div class="relative">
 			<img {alt} {src} class="max-h-screen max-w-screen" draggable="true" />
-			<button class="absolute top-2 right-2 text-white text-4xl cursor-none" on:click={closeImage}
+			<button class="absolute top-2 right-2 text-white text-4xl" on:click={closeImage}
 				>&times;</button
 			>
 		</div>

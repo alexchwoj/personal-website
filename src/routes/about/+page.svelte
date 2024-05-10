@@ -4,8 +4,6 @@
 	import Title from '$lib/components/Title.svelte';
 	import { fly } from 'svelte/transition';
 
-	import Cursor from '$lib/components/Cursor.svelte';
-
 	let technologies = [
 		{
 			category: 'Python',
@@ -67,10 +65,8 @@
 	<title>About Me</title>
 </svelte:head>
 
-<Cursor></Cursor>
-
 <div
-	class="max-w-screen-xl p-8 mx-auto mt-8 mb-12 bg-neutral-900 rounded-lg text-neutral-400"
+	class="max-w-screen-xl p-8 mx-auto mt-8 bg-neutral-900 rounded-lg text-neutral-400"
 	in:fly={{ x: -200, duration: 300, delay: 300 }}
 	out:fly={{ x: 200, duration: 300 }}
 >
@@ -110,3 +106,5 @@
 		{/each}
 	</div>
 </div>
+
+<div class="mt-8"></div>

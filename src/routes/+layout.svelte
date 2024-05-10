@@ -3,6 +3,7 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 </script>
 
-<Navbar></Navbar>
-
-<slot class="cursor-none" />
+<div class="relative h-screen overflow-x-hidden">
+	<Navbar></Navbar>
+	<slot />
+</div>

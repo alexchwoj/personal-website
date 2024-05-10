@@ -45,7 +45,7 @@
 	<T
 		is={angel_old_marble_version.scene}
 		position={[0, -2, 0]}
-		scale={1} 
+		scale={.8} 
 		rotation.y={rotation}
 		on:pointerenter={() => scale.set(2.5)}
 		on:pointerleave={() => scale.set(2)}
