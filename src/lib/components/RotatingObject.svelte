@@ -36,12 +36,7 @@
 <T.PointLight intensity={50} position={[-4, 1, 4]} color="#8700FF" />
 <T.PointLight intensity={50} position={[0, 6, 0]} color="#00FFAA" />
 
-<!--<T.Mesh position={[0, 6, 0]}>
-	<T.SphereGeometry args={[0.3, 64, 64]} />
-	<T.MeshStandardMaterial color="#ffffff" />
-</T.Mesh>-->
-
-{#await useGltf('/models/angel_old_marble_version.glb') then angel_old_marble_version}
+{#await useGltf('/models/compressed_angel.glb') then angel_old_marble_version}
 	<T
 		is={angel_old_marble_version.scene}
 		position={[0, -2, 0]}
