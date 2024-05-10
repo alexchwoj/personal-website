@@ -1,48 +1,57 @@
 <script lang="ts">
-    import Cursor from "$lib/components/Cursor.svelte";
+	import RotatingObject from '$lib/components/RotatingObject.svelte';
+	import { Canvas } from '@threlte/core';
+
+	import { scale, fly } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+
+	import github from '$lib/icons/github.svg';
+	import instagram from '$lib/icons/instagram.svg';
+	import linkedin from '$lib/icons/linkedin.svg';
+
+	import Cursor from '$lib/components/Cursor.svelte';
 </script>
+
+<svelte:head>
+	<title>Alexander Chwojewski</title>
+</svelte:head>
 
 <Cursor></Cursor>
 
-<nav class="bg-transparent py-4">
-	<div class="container max-w-screen-xl mx-auto flex justify-between items-center">
-		<div class="text-2xl font-bold text-white">Alexander Chwojewski</div>
-
-		<div class="space-x-4">
-			<a
-				href="/"
-				class="text-white border-b border-b-red-500 hover:text-black hover:bg-red-500 bg-po transition-all ease-out duration-300 cursor-none"
-				>Projects</a
-			>
-			<a
-				href="/"
-				class="text-white border-b border-b-red-500 hover:text-black hover:bg-red-500 bg-po transition-all ease-out duration-300 cursor-none"
-				>Projects</a
-			>
-			<a
-				href="/"
-				class="text-white border-b border-b-red-500 hover:text-black hover:bg-red-500 bg-po transition-all ease-out duration-300 cursor-none"
-				>About</a
-			>
-			<a
-				href="/"
-				class="text-white border-b border-b-red-500 hover:text-black hover:bg-red-500 bg-po transition-all ease-out duration-300 cursor-none"
-				>Blog</a
-			>
-		</div>
+<div class="relative h-screen">
+	<div
+		class="absolute inset-0"
+	>
+		<Canvas>
+			<RotatingObject></RotatingObject>
+		</Canvas>
 	</div>
-</nav>
 
-<div class="h-screen flex flex-col justify-center items-center">
-	<h1 class="text-white text-4xl font-bold mb-8 text-center">
-		Sup! 👋<br />
-		I'm Alexander a Software Developer
-	</h1>
+	<div
+		class="flex flex-col justify-center items-center relative z-10 h-full bg-image"
+		in:fly={{ x: -200, duration: 300, delay: 300 }}
+		out:fly={{ x: 200, duration: 300 }}
+	>
+		<h1 class="text-white text-4xl font-bold mb-8 text-center select-none text-shadow">
+			Sup! 👋<br />
+			I'm <span class="border-b-2 border-b-red-500">Alexander</span> a
+			<span class="border-b-2 border-b-red-500">Software Developer</span>
+		</h1>
 
-	<div class="flex items-center space-x-4">
-		<div class="w-12 h-12 bg-blue-500 rounded-full"></div>
-		<div class="w-12 h-12 bg-red-500 rounded-full"></div>
-		<div class="w-12 h-12 bg-green-500 rounded-full"></div>
-		<div class="w-12 h-12 bg-yellow-500 rounded-full"></div>
+		<div class="flex items-center space-x-4">
+			<a
+				href="https://github.com/alexchwoj"
+				class="w-12 h-12 bg-white text-black rounded-full cursor-none hover:ring-2 ring-offset-4 hover:ring-red-500 p-2 hover:text-white transition-all duration-500"
+			>
+				<img src={github} alt="GitHub" />
+			</a>
+			
+			<a
+				href="https://www.linkedin.com/in/alexander-chwojewski/"
+				class="w-12 h-12 bg-white text-black rounded-full cursor-none hover:ring-2 ring-offset-4 hover:ring-red-500 p-2 hover:text-white transition-all duration-500"
+			>
+				<img src={linkedin} alt="LinkedIn" />
+			</a>
+		</div>
 	</div>
 </div>

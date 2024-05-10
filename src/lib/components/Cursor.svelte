@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 
-	export let size = 20;
 	export let color = 'white';
 	export let shape = 'circle';
 	export let mixBlendMode = 'none';
@@ -9,6 +8,7 @@
 	let x = -100;
 	let y = -100;
 
+	let size = 20;
 	const cx = size / 2;
 	const cy = size / 2;
 
@@ -24,12 +24,12 @@
 			const hoverables = document.querySelectorAll('.hoverable, a, button');
 			hoverables.forEach((hoverable) => {
 				hoverable.addEventListener('mouseenter', () => {
-					size += 20;
+					size = 40;
 					document.body.style.cursor = 'none';
                     cursorElement?.classList.add('cursor-hovered');
 				});
 				hoverable.addEventListener('mouseleave', () => {
-					size -= 20;
+					size = 20;
                     cursorElement?.classList.remove('cursor-hovered');
 				});
 			});
@@ -75,8 +75,8 @@
     .cursor-hovered {
         background-color: transparent !important;
         transition: all 0.2s cubic-bezier(0.28, 0.8, 0.36, 1);
-        border-width: 2px;
-        border-color: var(--background-color);
+        border-width: 2px !important;
+        border-color: var(--background-color) !important;
         opacity: 1 !important;
     }
 </style>
