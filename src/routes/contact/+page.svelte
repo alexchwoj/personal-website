@@ -21,8 +21,8 @@
 			href="https://www.linkedin.com/in/alexander-chwojewski/">LinkedIn</a
 		>
 		or writing me an email at
-		<a class=" text-red-500" href="mailto:alexancerchwojewski@gmail.com"
-			>alexancerchwojewski@gmail.com</a
+		<a class=" text-red-500" href="mailto:alexander@chwojewski.com"
+			>alexander@chwojewski.com</a
 		>
 	</Paragraph>
 </div>

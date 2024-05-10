@@ -52,6 +52,15 @@
 			technologies: ['Python', 'NGINX']
 		}
 	];
+
+	let studies = [
+		{
+			school: "Teclab Higher Technical Institute",
+			place: "Argentina",
+			role: "Senior Cybersecurity Technician",
+			date: "2023 - Present"
+		}
+	]
 </script>
 
 <svelte:head>
@@ -64,24 +73,24 @@
 	out:fly={{ x: 200, duration: 300 }}
 >
 	<Title>Professional Experiences</Title>
-		{#each professional_experiences as experience}
-			<div class="p-4 bg-neutral-800 shadow-lg rounded-lg mb-4 text-white">
-				<div class="flex justify-between items-start">
-					<div>
-						<h3 class="text-xl font-bold text-neutral-400"><a class="text-neutral-100 hover:text-red-500 cursor-pointer transition-all" href={experience.url}>{experience.company}</a>, {experience.place}</h3>
-						<p class="text-md italic text-neutral-500">{experience.role}</p>
-					</div>
-					<p class="text-sm text-neutral-400">{experience.date}</p>
+	{#each professional_experiences as experience}
+		<div class="p-4 bg-neutral-800 shadow-lg rounded-lg mb-4 text-white">
+			<div class="flex justify-between items-start">
+				<div>
+					<h3 class="text-xl font-bold text-neutral-400"><a class="text-neutral-100 hover:text-red-500 cursor-pointer transition-all" href={experience.url}>{experience.company}</a>, {experience.place}</h3>
+					<p class="text-md italic text-neutral-500">{experience.role}</p>
 				</div>
-				<ul class="list-disc pl-5 mt-2">
-					{#each experience.descriptions  as description}
-					<li class="text-neutral-400 mb-1">
-						{description}
-					</li>
-					{/each}
-				</ul>
+				<p class="text-sm text-neutral-400">{experience.date}</p>
 			</div>
-		{/each}
+			<ul class="list-disc pl-5 mt-2">
+				{#each experience.descriptions  as description}
+				<li class="text-neutral-400 mb-1">
+					{description}
+				</li>
+				{/each}
+			</ul>
+		</div>
+	{/each}
 
 	<hr class="mb-4 border-neutral-800" />
 
@@ -104,5 +113,16 @@
 	<hr class="mb-4 border-neutral-800" />
 
 	<Title>Education</Title>
+	{#each studies as career}
+		<div class="p-4 bg-neutral-800 shadow-lg rounded-lg mb-4 text-white">
+			<div class="flex justify-between items-start">
+				<div>
+					<h3 class="text-xl font-bold text-neutral-400">{career.school}, {career.place}</h3>
+					<p class="text-md italic text-neutral-500">{career.role}</p>
+				</div>
+				<p class="text-sm text-neutral-400">{career.date}</p>
+			</div>
+		</div>
+	{/each}
 
 </div>
