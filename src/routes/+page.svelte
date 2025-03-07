@@ -38,6 +38,7 @@
 		<div class="flex items-center space-x-4">
 			<a
 				href="https://github.com/alexchwoj"
+				target="_blank"
 				class="w-12 h-12 bg-white text-black rounded-full hover:ring-2 ring-offset-4 hover:ring-red-500 p-2 hover:text-white transition-all duration-500"
 			>
 				<img src={github} alt="GitHub" />
@@ -45,6 +46,7 @@
 			
 			<a
 				href="https://www.linkedin.com/in/alexander-chwojewski/"
+				target="_blank"
 				class="w-12 h-12 bg-white text-black rounded-full hover:ring-2 ring-offset-4 hover:ring-red-500 p-2 hover:text-white transition-all duration-500"
 			>
 				<img src={linkedin} alt="LinkedIn" />

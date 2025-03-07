@@ -36,7 +36,7 @@
 <T.PointLight intensity={50} position={[-4, 1, 4]} color="#8700FF" />
 <T.PointLight intensity={50} position={[0, 6, 0]} color="#00FFAA" />
 
-{#await useGltf('/models/compressed_angel.glb') then angel_old_marble_version}
+{#await useGltf('/models/original_angel.glb') then angel_old_marble_version}
 	<T
 		is={angel_old_marble_version.scene}
 		position={[0, -2, 0]}
