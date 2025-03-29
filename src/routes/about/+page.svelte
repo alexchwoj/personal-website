@@ -11,7 +11,11 @@
 		},
 		{
 			category: 'Javascript',
-			items: ['NodeJS', 'jQuery']
+			items: ['Vanilla', 'TypeScript', 'NodeJS', 'jQuery', 'Electron', 'JerryScript']
+		},
+		{
+			category: 'Scripting',
+			items: ['Lua', 'Pawn', 'AngelScript', 'Bash', 'PowerShell']
 		},
 		{
 			category: 'Databases',
@@ -19,11 +23,23 @@
 		},
 		{
 			category: 'CI/CD',
-			items: ['Jenkins', 'AWS CodeDeploy']
+			items: ['Jenkins', 'AWS CodeDeploy', 'AWS CodePipeline', 'GitHub Actions']
 		},
 		{
 			category: 'Virtualization',
-			items: ['LxC', 'KVM', 'Proxmox', 'VirtualBox', 'VMWare', 'Hyper-V']
+			items: ['LxC', 'KVM', 'Proxmox', 'VirtualBox', 'VMWare', 'Hyper-V', 'Docker']
+		},
+		{
+			category: 'VPN',
+			items: ['Wireguard', 'Twingate']
+		},
+		{
+			category: 'Cloud',
+			items: ['Amazon Web Services', 'Azure', 'OVH']
+		},
+		{
+			category: 'Brokers',
+			items: ['RabbitMQ', 'Redis']
 		},
 		{
 			category: 'MFT',
@@ -31,11 +47,11 @@
 		},
 		{
 			category: 'Web Desing',
-			items: ['HTML5', 'CSS', 'Svelte']
+			items: ['HTML5', 'CSS', 'Svelte', 'Bootstrap', 'Tailwind CSS']
 		},
 		{
-			category: 'Cloud',
-			items: ['Amazon Web Services']
+			category: 'Web Servers',
+			items: ['Apache', 'Nginx', 'IIS']
 		},
 		{
 			category: 'CRM',
@@ -43,7 +59,7 @@
 		},
 		{
 			category: 'Other',
-			items: ['Unix', 'Git', 'C#']
+			items: ['Unix', 'Git', 'Unity3D', 'C#', 'C/CPP']
 		}
 	];
 
