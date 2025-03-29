@@ -13,8 +13,6 @@
 	});
 </script>
 
-<!--<Grid cellColor="#808080" sectionSize={0} /> -->
-
 <T.PerspectiveCamera
 	makeDefault
 	position={[10, 10, 10]}
@@ -26,7 +24,7 @@
 <T.AmbientLight color="#ffffff" intensity={0.2} />
 <T.DirectionalLight
 	color="#ffffff"
-	intensity={.5}
+	intensity={0.5}
 	position={[10, 10, 0]}
 	shadow.camera.top={8}
 	castShadow
@@ -40,7 +38,7 @@
 	<T
 		is={angel_old_marble_version.scene}
 		position={[0, -2, 0]}
-		scale={.8} 
+		scale={0.8}
 		rotation.y={rotation}
 		on:pointerenter={() => scale.set(2.5)}
 		on:pointerleave={() => scale.set(2)}

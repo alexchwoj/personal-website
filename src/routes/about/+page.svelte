@@ -66,23 +66,22 @@
 </svelte:head>
 
 <div
-	class="max-w-screen-xl p-8 mx-auto mt-8 bg-neutral-900 rounded-lg text-neutral-400"
+	class="max-w-screen-xl p-8 mx-auto mt-8 bg-neutral-900 rounded-none sm:rounded-lg text-neutral-400"
 	in:fly={{ x: -200, duration: 300, delay: 300 }}
 	out:fly={{ x: 200, duration: 300 }}
 >
 	<Title>About Me</Title>
 	<Paragraph>
-		Hello, I'm Alexander Chwojewski, a software developer based in Northern Argentina. My family
-		originally came from Ukraine, migrating to Argentina during World War II. My personal interests
-		lie in classical music, particularly opera, and a fascination with aeronautics and aerospace. In
-		my professional life, I focus on using my diverse background and interests to create innovative
-		software solutions.
+		I'm a software developer from Argentina. Currently working as a Tech Lead, with a passion for
+		game development and cybersecurity in my free time.
 	</Paragraph>
+
+	<hr class="mb-4 border-neutral-800" />
 
 	<Title>Technologies</Title>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
 		{#each technologies as techCategory}
-			<div class="p-4 bg-neutral-800 shadow-lg rounded-lg">
+			<div class="p-4 bg-neutral-800 border border-neutral-700 shadow-md rounded-lg">
 				<h3 class="text-md font-semibold text-neutral-200 mb-2">{techCategory.category}</h3>
 				<ul class="list-disc pl-6">
 					{#each techCategory.items as techItem}
@@ -96,7 +95,7 @@
 	<Title>Languages</Title>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 		{#each languages as language}
-			<div class="p-4 bg-neutral-800 shadow-lg rounded-lg">
+			<div class="p-4 bg-neutral-800 border border-neutral-700 shadow-md rounded-lg">
 				<h3 class="text-md font-semibold text-neutral-200 mb-2">
 					{language.name}
 					{language.flag}

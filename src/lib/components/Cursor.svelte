@@ -14,8 +14,8 @@
 
 	onMount(() => {
 		const initCursor = () => {
-            const cursorElement = document.querySelector('.custom-cursor');
-            document.body.style.cursor = 'none';
+			const cursorElement = document.querySelector('.custom-cursor');
+			document.body.style.cursor = 'none';
 
 			document.addEventListener('mousemove', (e) => {
 				x = e.clientX;
@@ -26,11 +26,11 @@
 				hoverable.addEventListener('mouseenter', () => {
 					size = 40;
 					document.body.style.cursor = 'none';
-                    cursorElement?.classList.add('cursor-hovered');
+					cursorElement?.classList.add('cursor-hovered');
 				});
 				hoverable.addEventListener('mouseleave', () => {
 					size = 20;
-                    cursorElement?.classList.remove('cursor-hovered');
+					cursorElement?.classList.remove('cursor-hovered');
 				});
 			});
 		};
@@ -58,7 +58,7 @@
 		border-radius: 50%;
 		pointer-events: none;
 		z-index: 99999;
-        opacity: 0.50;
+		opacity: 0.5;
 
 		transition: all 0.2s cubic-bezier(0.28, 0.8, 0.36, 1);
 		cursor: none;
@@ -67,16 +67,16 @@
 	.custom-cursor.square {
 		border-radius: 0;
 	}
-	
-    .cursor-none {
+
+	.cursor-none {
 		cursor: none;
 	}
 
-    .cursor-hovered {
-        background-color: transparent !important;
-        transition: all 0.2s cubic-bezier(0.28, 0.8, 0.36, 1);
-        border-width: 2px !important;
-        border-color: var(--background-color) !important;
-        opacity: 1 !important;
-    }
+	.cursor-hovered {
+		background-color: transparent !important;
+		transition: all 0.2s cubic-bezier(0.28, 0.8, 0.36, 1);
+		border-width: 2px !important;
+		border-color: var(--background-color) !important;
+		opacity: 1 !important;
+	}
 </style>

@@ -8,7 +8,6 @@
 	import github from '$lib/icons/github.svg';
 	import instagram from '$lib/icons/instagram.svg';
 	import linkedin from '$lib/icons/linkedin.svg';
-
 </script>
 
 <svelte:head>
@@ -16,20 +15,18 @@
 </svelte:head>
 
 <div class="h-fit">
-	<div
-		class="absolute inset-0 -z-10"
-	>
+	<div class="absolute inset-0 -z-10">
 		<Canvas>
 			<RotatingObject></RotatingObject>
 		</Canvas>
 	</div>
 
 	<div
-		class="flex flex-col justify-center items-center relative z-10 mt-[20%] select-none"
+		class="flex flex-col justify-center items-center relative z-10 mt-[50%] sm:mt-[20%] select-none"
 		in:fly={{ x: -200, duration: 300, delay: 300 }}
 		out:fly={{ x: 200, duration: 300 }}
 	>
-		<h1 class="text-white text-4xl font-bold mb-8 text-center text-shadow">
+		<h1 class="text-white text-2xl sm:text-4xl font-bold mb-8 text-center text-shadow">
 			Sup!<br />
 			I'm <span class="border-b-2 border-b-red-500">Alexander</span>, a
 			<span class="border-b-2 border-b-red-500">Software Developer</span>
@@ -43,7 +40,7 @@
 			>
 				<img src={github} alt="GitHub" />
 			</a>
-			
+
 			<a
 				href="https://www.linkedin.com/in/alexander-chwojewski/"
 				target="_blank"
