@@ -1,20 +1,41 @@
-<script>
+<script lang="ts">
 	import { T, useTask } from '@threlte/core';
 	import { Grid, interactivity, useGltf } from '@threlte/extras';
+	import { spring } from 'svelte/motion';
 
 	interactivity();
+
+	const cameraPosition = spring([10, 10, 10], {
+        stiffness: 0.02,
+        damping: 0.3
+    });
+
+    function handleMouseMove(event: MouseEvent) {
+        const { clientX, clientY } = event;
+        const mouseX = (clientX / window.innerWidth) * 2 - 1;
+        const mouseY = (clientY / window.innerHeight) * 2 - 1;
+        
+        cameraPosition.set([
+            10 + mouseX,
+            10 + mouseY,
+            10
+        ]);
+    }
+
 	let rotation = 0;
 	useTask((delta) => {
 		rotation += delta;
 	});
 </script>
 
+<svelte:window on:mousemove={handleMouseMove} />
+
 <T.PerspectiveCamera
-	makeDefault
-	position={[10, 10, 10]}
-	on:create={({ ref }) => {
-		ref.lookAt(0, 1, 0);
-	}}
+    makeDefault
+    position={$cameraPosition}
+    on:create={({ ref }) => {
+        ref.lookAt(0, 1, 0);
+    }}
 />
 
 <T.AmbientLight color="#ffffff" intensity={0.2} />
