@@ -74,7 +74,7 @@
 			description:
 				'This repository provides a fix for the RCE vulnerability found in previous versions of the SA-MP R5 client.',
 			url: 'https://github.com/alexchwoj/samp-rce-fix',
-			technologies: ['C++', 'Eeverse Engineering']
+			technologies: ['C++', 'Reverse Engineering']
 		}
 	];
 
