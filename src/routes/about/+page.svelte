@@ -3,6 +3,7 @@
 	import Paragraph from '$lib/components/Paragraph.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import { fly } from 'svelte/transition';
+	import { ExternalLink } from 'lucide-svelte';
 
 	let technologies = [
 		{
@@ -62,19 +63,6 @@
 			items: ['Unix', 'Git', 'Unity3D', 'C#', 'C/CPP']
 		}
 	];
-
-	let languages = [
-		{
-			name: 'Spanish',
-			proficiency: 'Native',
-			flag: '🇪🇸'
-		},
-		{
-			name: 'English',
-			proficiency: 'Basic',
-			flag: '🇺🇸'
-		}
-	];
 </script>
 
 <svelte:head>
@@ -110,15 +98,24 @@
 
 	<Title>Languages</Title>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-		{#each languages as language}
-			<div class="p-4 bg-neutral-800 border border-neutral-700 shadow-md rounded-lg">
-				<h3 class="text-md font-semibold text-neutral-200 mb-2">
-					{language.name}
-					{language.flag}
-				</h3>
-				<p class="text-neutral-400">{language.proficiency}</p>
+		<div class="p-4 bg-neutral-800 border border-neutral-700 shadow-md rounded-lg">
+			<h3 class="text-md font-semibold text-neutral-200 mb-2">
+				Spanish
+			</h3>
+			<p class="text-neutral-400">Native</p>
+		</div>
+
+		<div class="p-4 bg-neutral-800 border border-neutral-700 shadow-md rounded-lg">
+			<h3 class="text-md font-semibold text-neutral-200 mb-2">
+				English
+			</h3>
+			<div class="flex items-center gap-2">
+				<p class="text-neutral-400">B2 Upper Intermediate</p>
+				<a href="https://cert.efset.org/es/LCCo9j" class="text-neutral-400 hover:text-red-500 transition-all">
+					<ExternalLink size={16} />
+				</a>
 			</div>
-		{/each}
+		</div>
 	</div>
 </div>
 
