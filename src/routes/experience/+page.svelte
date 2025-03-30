@@ -21,7 +21,7 @@
 			place: 'Remote (Madrid, Spain)',
 			url: 'https://roozservers.com/',
 			role: 'Network Defender, Web Developer',
-			date: 'February 2029 - August 2021',
+			date: 'February 2019 - August 2021',
 			descriptions: [
 				'RoozServers was a project of friends dedicated to the sale of dedicated servers for video games and DDoS protection.',
 				'I worked on this project throughout high school. I was tasked with developing game server firewalls using eBPF and XDP, as well as working on the main website using Flask for the backend and Bootstrap for the frontend.'
