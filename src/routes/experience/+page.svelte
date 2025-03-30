@@ -20,7 +20,7 @@
 			company: 'RoozServers',
 			place: 'Remote (Madrid, Spain)',
 			url: 'https://roozservers.com/',
-			role: 'Network Defender, Web Developer',
+			role: 'Network Engineer, Web Developer',
 			date: 'February 2019 - August 2021',
 			descriptions: [
 				'RoozServers was a project of friends dedicated to the sale of dedicated servers for video games and DDoS protection.',
