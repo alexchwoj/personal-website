@@ -44,6 +44,12 @@
 			technologies: ['Python']
 		},
 		{
+			title: 'hiddenote',
+			description: 'A simple encrypted notepad application built with Python and PyQt6.',
+			url: 'https://github.com/alexchwoj/hiddenote',
+			technologies: ['Python', 'Qt', 'Desktop']
+		},
+		{
 			title: 'pizza-detector',
 			description:
 				'Small CNN model to classify images based on whether they contain a pizza or not.',
