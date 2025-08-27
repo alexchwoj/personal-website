@@ -23,16 +23,16 @@
 </script>
 
 <div class="relative">
-	<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+	<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
 		<Search class="h-5 w-5 text-neutral-400" />
 	</div>
 
 	<input
-		type="search"
+		type="text"
 		bind:value
 		on:input={handleInput}
 		{placeholder}
-		class="block w-full pl-10 pr-10 py-4 bg-neutral-800/50 border border-neutral-600 rounded-xl text-white placeholder-neutral-400 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 backdrop-blur-sm"
+		class="block w-full pl-10 pr-10 py-4 bg-neutral-800/50 border border-neutral-600 rounded-xl text-white placeholder-neutral-400 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 backdrop-blur-sm [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none"
 	/>
 
 	{#if value}
