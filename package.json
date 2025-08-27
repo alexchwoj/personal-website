@@ -33,9 +33,13 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@tailwindcss/line-clamp": "^0.4.4",
 		"@threlte/core": "^7.0.12",
 		"@threlte/extras": "^8.0.10",
+		"@types/marked": "^5.0.2",
+		"fuse.js": "^7.1.0",
 		"lucide-svelte": "^0.485.0",
+		"marked": "^16.2.0",
 		"three": "^0.159.0"
 	}
 }

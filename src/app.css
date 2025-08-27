@@ -19,4 +19,46 @@ body {
 			0px 3px 6px rgba(0, 0, 0, 1),
 			0px 6px 6px rgba(0, 0, 0, 1);
 	}
+
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	
+	.animate-in {
+		animation-fill-mode: both;
+	}
+	
+	.slide-in-from-bottom-4 {
+		animation: slideInFromBottom 0.5s ease-out;
+	}
+	
+	.slide-in-from-left-4 {
+		animation: slideInFromLeft 0.5s ease-out;
+	}
+	
+	@keyframes slideInFromBottom {
+		from {
+			opacity: 0;
+			transform: translateY(1rem);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+	@keyframes slideInFromLeft {
+		from {
+			opacity: 0;
+			transform: translateX(-1rem);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
 }
