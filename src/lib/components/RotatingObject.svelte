@@ -64,11 +64,11 @@
     fadeStrength={1}
 />
 
-{#await useGltf('/models/original_angel.glb') then angel_old_marble_version}
+{#await useGltf('/models/psx_retro_computer.glb') then angel_old_marble_version}
 	<T
 		is={angel_old_marble_version.scene}
-		position={[0, -2, 0]}
-		scale={0.8}
+		position={[0, 0, 0]}
+		scale={4}
 		rotation.y={rotation}
 	/>
 {/await}
