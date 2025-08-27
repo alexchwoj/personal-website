@@ -28,9 +28,13 @@
 <PageContainer>
 	<!-- Enhanced hero section -->
 	<div class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700' : ''}`}>
-		<div class="bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl p-8 lg:p-12 shadow-xl shadow-black/10">
+		<div
+			class="bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl p-8 lg:p-12 shadow-xl shadow-black/10"
+		>
 			<div class="flex items-center gap-4 mb-6">
-				<div class="w-12 h-12 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center border border-green-500/30">
+				<div
+					class="w-12 h-12 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center border border-green-500/30"
+				>
 					<MessageCircle class="w-6 h-6 text-green-400" />
 				</div>
 				<div>
@@ -38,16 +42,18 @@
 					<p class="text-neutral-400">Ready to start a conversation? I'd love to hear from you</p>
 				</div>
 			</div>
-			
+
 			<div class="space-y-6">
 				<p class="text-lg lg:text-xl text-neutral-300 leading-relaxed">
-					Whether you have a project in mind, want to collaborate, or just want to say hello - 
-					I'm always excited to connect with fellow developers, designers, and innovators.
+					Whether you have a project in mind, want to collaborate, or just want to say hello - I'm
+					always excited to connect with fellow developers, designers, and innovators.
 				</p>
-				
+
 				<div class="flex flex-wrap gap-3 pt-4">
 					{#each ['Available for Projects', 'Open to Collaboration', 'Always Learning', 'Remote Friendly'] as status}
-						<span class="px-4 py-2 bg-green-500/10 text-green-300 rounded-full text-sm border border-green-500/20 font-medium">
+						<span
+							class="px-4 py-2 bg-green-500/10 text-green-300 rounded-full text-sm border border-green-500/20 font-medium"
+						>
 							{status}
 						</span>
 					{/each}
@@ -57,25 +63,35 @@
 	</div>
 
 	<!-- Enhanced contact methods -->
-	<div class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-200' : ''}`}>
-		<div class="flex items-center gap-4">
-			<div class="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-				<Send class="w-5 h-5 text-blue-400" />
-			</div>
-			<div>
+	<div
+		class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-200' : ''}`}
+	>
+		<div class="space-y-4 mt-8">
+			<div class="flex items-center gap-4">
+				<div
+					class="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg flex items-center justify-center border border-blue-500/30"
+				>
+					<Send class="w-5 h-5 text-blue-400" />
+				</div>
 				<h2 class="text-2xl lg:text-3xl font-bold text-white flex items-center gap-3">
 					<span class="w-1 h-8 bg-gradient-to-b from-blue-400 to-blue-500 rounded-full"></span>
 					Get In Touch
 				</h2>
-				<p class="text-neutral-400">Choose your preferred way to reach out</p>
 			</div>
+			<p class="text-neutral-400 ml-14">Choose your preferred way to reach out</p>
 		</div>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			<!-- LinkedIn Card -->
-			<div class={`group bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-xl p-6 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1 ${mounted ? 'animate-in slide-in-from-bottom duration-500 delay-300' : ''}`}>
+			<div
+				class={`group bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-xl p-6 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1 ${
+					mounted ? 'animate-in slide-in-from-bottom duration-500 delay-300' : ''
+				}`}
+			>
 				<div class="flex items-center gap-4 mb-4">
-					<div class="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center border border-blue-500/30 group-hover:scale-110 transition-transform duration-300">
+					<div
+						class="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center border border-blue-500/30 group-hover:scale-110 transition-transform duration-300"
+					>
 						<Linkedin class="w-6 h-6 text-blue-400" />
 					</div>
 					<div>
@@ -83,11 +99,12 @@
 						<p class="text-neutral-400 text-sm">Professional networking</p>
 					</div>
 				</div>
-				
+
 				<p class="text-neutral-300 mb-6 leading-relaxed">
-					Connect with me on LinkedIn for professional opportunities, industry discussions, or to expand your network.
+					Connect with me on LinkedIn for professional opportunities, industry discussions, or to
+					expand your network.
 				</p>
-				
+
 				<a
 					href="https://www.linkedin.com/in/alexander-chwojewski/"
 					target="_blank"
@@ -100,9 +117,15 @@
 			</div>
 
 			<!-- Email Card -->
-			<div class={`group bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-xl p-6 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/10 transition-all duration-300 hover:-translate-y-1 ${mounted ? 'animate-in slide-in-from-bottom duration-500 delay-450' : ''}`}>
+			<div
+				class={`group bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-xl p-6 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/10 transition-all duration-300 hover:-translate-y-1 ${
+					mounted ? 'animate-in slide-in-from-bottom duration-500 delay-450' : ''
+				}`}
+			>
 				<div class="flex items-center gap-4 mb-4">
-					<div class="w-12 h-12 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-xl flex items-center justify-center border border-red-500/30 group-hover:scale-110 transition-transform duration-300">
+					<div
+						class="w-12 h-12 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-xl flex items-center justify-center border border-red-500/30 group-hover:scale-110 transition-transform duration-300"
+					>
 						<Mail class="w-6 h-6 text-red-400" />
 					</div>
 					<div>
@@ -110,13 +133,16 @@
 						<p class="text-neutral-400 text-sm">Direct communication</p>
 					</div>
 				</div>
-				
+
 				<p class="text-neutral-300 mb-4 leading-relaxed">
-					Send me an email for detailed project discussions, proposals, or any questions you might have.
+					Send me an email for detailed project discussions, proposals, or any questions you might
+					have.
 				</p>
-				
+
 				<div class="space-y-3">
-					<div class="flex items-center gap-2 text-neutral-400 bg-neutral-800/50 rounded-lg p-3 border border-neutral-700/50">
+					<div
+						class="flex items-center gap-2 text-neutral-400 bg-neutral-800/50 rounded-lg p-3 border border-neutral-700/50"
+					>
 						<Mail class="w-4 h-4 text-red-400" />
 						<span class="font-mono text-sm">{SITE_CONFIG.email}</span>
 						<button
@@ -126,7 +152,7 @@
 							Copy
 						</button>
 					</div>
-					
+
 					<a
 						href="mailto:{SITE_CONFIG.email}"
 						class="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg font-medium transition-all duration-200 hover:scale-105 group"
@@ -140,11 +166,15 @@
 	</div>
 
 	<!-- Enhanced response time info -->
-	<div class={`mt-12 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-600' : ''}`}>
-		<div class="bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl p-8 lg:p-12 shadow-xl shadow-black/10">
+	<div class={`mt-24 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-600' : ''}`}>
+		<div
+			class="bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl p-8 lg:p-12 shadow-xl shadow-black/10"
+		>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 				<div class="space-y-3">
-					<div class="w-12 h-12 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center border border-green-500/30 mx-auto">
+					<div
+						class="w-12 h-12 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center border border-green-500/30 mx-auto"
+					>
 						<MessageCircle class="w-6 h-6 text-green-400" />
 					</div>
 					<h3 class="text-lg font-semibold text-white">Quick Response</h3>
@@ -154,7 +184,9 @@
 				</div>
 
 				<div class="space-y-3">
-					<div class="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center border border-blue-500/30 mx-auto">
+					<div
+						class="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center border border-blue-500/30 mx-auto"
+					>
 						<Coffee class="w-6 h-6 text-blue-400" />
 					</div>
 					<h3 class="text-lg font-semibold text-white">Coffee Chats</h3>
@@ -164,7 +196,9 @@
 				</div>
 
 				<div class="space-y-3">
-					<div class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-xl flex items-center justify-center border border-purple-500/30 mx-auto">
+					<div
+						class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-xl flex items-center justify-center border border-purple-500/30 mx-auto"
+					>
 						<Calendar class="w-6 h-6 text-purple-400" />
 					</div>
 					<h3 class="text-lg font-semibold text-white">Flexible Schedule</h3>
@@ -176,7 +210,8 @@
 
 			<div class="mt-8 pt-8 border-t border-neutral-700/50 text-center">
 				<p class="text-neutral-300 text-lg leading-relaxed max-w-2xl mx-auto">
-					Looking forward to hearing from you! Let's discuss how we can work together to create something amazing.
+					Looking forward to hearing from you! Let's discuss how we can work together to create
+					something amazing.
 				</p>
 				<div class="flex items-center justify-center gap-2 mt-4">
 					<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
