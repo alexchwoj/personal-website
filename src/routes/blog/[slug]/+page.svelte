@@ -144,7 +144,7 @@
 					</div>
 					<a
 						href="/blog"
-						class="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-xl font-medium transition-all duration-200 hover:scale-105"
+						class="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-500 text-white rounded-xl font-medium transition-all duration-200 hover:scale-105"
 					>
 						<ArrowLeft class="w-4 h-4" />
 						Back to all posts
