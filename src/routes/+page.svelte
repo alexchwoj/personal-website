@@ -129,7 +129,6 @@
 </div>
 
 <style>
-	/* Custom animations */
 	@keyframes animate-in {
 		from {
 			opacity: 0;

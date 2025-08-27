@@ -53,7 +53,6 @@
 				<span class="font-semibold">cybersecurity</span> - always exploring new technologies and pushing
 				the boundaries of what's possible.
 			</p>
-
 		</div>
 	</div>
 
@@ -135,7 +134,6 @@
 </PageContainer>
 
 <style>
-	/* Custom animations */
 	@keyframes animate-in {
 		from {
 			opacity: 0;

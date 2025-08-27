@@ -244,14 +244,12 @@
 </PageContainer>
 
 <style>
-	/* Base typography and layout */
 	:global(.prose-content) {
 		font-size: 1.125rem;
 		line-height: 1.75;
 		max-width: none;
 	}
 
-	/* Enhanced headings with gradients and spacing */
 	:global(.prose-content h1) {
 		font-size: 2rem;
 		font-weight: 700;
@@ -351,7 +349,6 @@
 		margin-bottom: 0.5rem;
 	}
 
-	/* Enhanced text styling */
 	:global(.prose-content p) {
 		color: #d1d5db;
 		line-height: 1.75;
@@ -370,7 +367,6 @@
 		font-style: italic;
 	}
 
-	/* Enhanced links */
 	:global(.prose-content a) {
 		color: #f87171;
 		text-decoration: underline;
@@ -386,7 +382,6 @@
 		box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.2);
 	}
 
-	/* Enhanced lists */
 	:global(.prose-content ul) {
 		color: #d1d5db;
 		margin-left: 2rem;
@@ -423,7 +418,6 @@
 		box-shadow: 0 1px 3px 0 rgba(239, 68, 68, 0.3);
 	}
 
-	/* Enhanced blockquotes */
 	:global(.prose-content blockquote) {
 		position: relative;
 		border-left: 4px solid #ef4444;
@@ -454,7 +448,6 @@
 		line-height: 1.75;
 	}
 
-	/* Enhanced code styling */
 	:global(.prose-content code) {
 		background: linear-gradient(to right, #262626, #404040);
 		color: #fca5a5;
@@ -486,7 +479,6 @@
 		box-shadow: none;
 	}
 
-	/* Enhanced images */
 	:global(.prose-content img) {
 		border-radius: 1rem;
 		margin: 2.5rem 0;
@@ -502,7 +494,6 @@
 		transform: scale(1.02);
 	}
 
-	/* Enhanced tables */
 	:global(.prose-content table) {
 		width: 100%;
 		border-collapse: collapse;
@@ -549,7 +540,6 @@
 		background-color: rgba(38, 38, 38, 0.3);
 	}
 
-	/* Enhanced horizontal rules */
 	:global(.prose-content hr) {
 		border: 0;
 		height: 1px;
@@ -571,7 +561,6 @@
 		box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.5);
 	}
 
-	/* Focus states for accessibility */
 	:global(.prose-content a:focus) {
 		outline: 2px solid #ef4444;
 		outline-offset: 4px;
@@ -584,7 +573,6 @@
 		border-radius: 4px;
 	}
 
-	/* Custom animations */
 	@keyframes animate-in {
 		from {
 			opacity: 0;
@@ -632,7 +620,6 @@
 		animation-delay: 0.5s;
 	}
 
-	/* Improved scrollbar styling */
 	:global(.prose-content) {
 		scrollbar-width: thin;
 		scrollbar-color: #ef4444 #171717;
@@ -656,7 +643,6 @@
 		background: #f87171;
 	}
 
-	/* Large screen optimizations */
 	@media (min-width: 1024px) {
 		:global(.prose-content h1) {
 			font-size: 2.5rem;
