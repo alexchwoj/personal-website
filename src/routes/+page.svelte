@@ -24,8 +24,7 @@
 	canonical={SITE_CONFIG.url}
 />
 
-<div class="h-fit relative overflow-hidden">
-	<!-- Enhanced background with gradient overlay -->
+<div class="min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
 	<div class="absolute inset-0 -z-10">
 		<div
 			class="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-red-900/10 z-10"
@@ -35,17 +34,14 @@
 		</Canvas>
 	</div>
 
-	<!-- Main hero section with enhanced styling -->
 	<div
-		class={`flex flex-col justify-center items-center relative z-20 mt-[50%] sm:mt-[20%] select-none ${
+		class={`flex flex-col justify-center items-center relative z-20 select-none ${
 			mounted ? 'animate-in slide-in-from-bottom duration-700' : ''
 		}`}
 		in:fly={{ x: -200, duration: 300, delay: 300 }}
 		out:fly={{ x: 200, duration: 300 }}
 	>
-		<!-- Enhanced hero content -->
 		<div class="text-center space-y-8 px-4 max-w-4xl mx-auto">
-			<!-- Status indicator -->
 			<div
 				class={`inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-sm font-medium ${
 					mounted ? 'animate-in slide-in-from-top duration-500 delay-200' : ''
@@ -55,21 +51,24 @@
 				Available for new opportunities
 			</div>
 
-			<!-- Main title with enhanced typography -->
 			<div class="space-y-4">
-				<h1 class="text-white text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+				<h1
+					class="text-white text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight drop-shadow-[0_2px_16px_rgba(0,0,0,0.7)]"
+				>
 					<span
-						class={`block ${mounted ? 'animate-in slide-in-from-left duration-500 delay-300' : ''}`}
+						class={`block drop-shadow-[0_2px_16px_rgba(0,0,0,0.7)] ${
+							mounted ? 'animate-in slide-in-from-left duration-500 delay-300' : ''
+						}`}
 					>
 						Hello! 👋
 					</span>
 					<span
-						class={`block ${
+						class={`block drop-shadow-[0_2px_16px_rgba(0,0,0,0.7)] ${
 							mounted ? 'animate-in slide-in-from-right duration-500 delay-500' : ''
 						}`}
 					>
 						I'm <span
-							class="bg-gradient-to-r from-white via-red-400 to-red-500 bg-clip-text text-transparent font-extrabold"
+							class="bg-gradient-to-r from-white via-red-400 to-red-500 bg-clip-text text-transparent font-extrabold drop-shadow-[0_2px_16px_rgba(0,0,0,0.7)]"
 							>Alexander</span
 						>
 					</span>
@@ -80,7 +79,9 @@
 						mounted ? 'animate-in slide-in-from-bottom duration-500 delay-700' : ''
 					}`}
 				>
-					<p class="text-xl sm:text-2xl lg:text-3xl text-neutral-300 font-light">
+					<p
+						class="text-xl sm:text-2xl lg:text-3xl text-neutral-300 font-light drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]"
+					>
 						A passionate <span class="text-red-400 font-semibold">Software Developer</span>
 					</p>
 					<p class="text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
@@ -89,22 +90,6 @@
 				</div>
 			</div>
 
-			<!-- Enhanced tech stack indicators -->
-			<div
-				class={`flex flex-wrap justify-center gap-3 ${
-					mounted ? 'animate-in slide-in-from-bottom duration-500 delay-900' : ''
-				}`}
-			>
-				{#each ['React', 'TypeScript', 'Node.js', 'SvelteKit'] as tech}
-					<span
-						class="px-3 py-1.5 bg-neutral-800/50 border border-neutral-700/50 rounded-full text-neutral-300 text-sm font-medium hover:bg-red-500/10 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 backdrop-blur-sm"
-					>
-						{tech}
-					</span>
-				{/each}
-			</div>
-
-			<!-- Enhanced social links -->
 			<div
 				class={`flex items-center justify-center space-x-6 ${
 					mounted ? 'animate-in slide-in-from-bottom duration-500 delay-1100' : ''
@@ -118,7 +103,6 @@
 				/>
 			</div>
 
-			<!-- Call to action buttons -->
 			<div
 				class={`flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 ${
 					mounted ? 'animate-in slide-in-from-bottom duration-500 delay-1300' : ''
@@ -139,18 +123,6 @@
 					<Sparkles class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
 					Let's Connect
 				</a>
-			</div>
-		</div>
-
-		<!-- Scroll indicator -->
-		<div
-			class={`absolute bottom-8 left-1/2 transform -translate-x-1/2 ${
-				mounted ? 'animate-in slide-in-from-bottom duration-500 delay-1500' : ''
-			}`}
-		>
-			<div class="flex flex-col items-center gap-2 text-neutral-400 animate-bounce">
-				<span class="text-sm font-medium">Explore more</span>
-				<ChevronDown class="w-5 h-5" />
 			</div>
 		</div>
 	</div>

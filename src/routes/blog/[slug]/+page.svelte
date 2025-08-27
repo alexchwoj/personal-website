@@ -54,7 +54,6 @@
 			<Breadcrumb items={breadcrumbItems} />
 		</div>
 
-		<!-- Article with enhanced card styling and animations -->
 		<article
 			class={`bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl overflow-hidden shadow-2xl shadow-black/20 ${
 				mounted ? 'animate-in slide-in-from-bottom-8 duration-700 delay-150' : ''
@@ -72,7 +71,6 @@
 							class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-900/20 to-transparent"
 						></div>
 
-						<!-- Floating share button on image -->
 						<button
 							on:click={sharePost}
 							class="absolute top-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-red-500/80 hover:border-red-500/50 transition-all duration-300 hover:scale-110"
@@ -85,7 +83,6 @@
 
 				<div class="p-8 lg:p-12">
 					<div class="space-y-8">
-						<!-- Enhanced metadata section -->
 						<div class="flex flex-wrap items-center gap-6 text-sm">
 							<div
 								class="flex items-center gap-2 text-neutral-400 hover:text-red-400 transition-colors duration-200"
@@ -126,7 +123,6 @@
 							</div>
 						</div>
 
-						<!-- Enhanced title section -->
 						<div class="space-y-6">
 							<h1
 								class="text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight"
@@ -143,7 +139,6 @@
 							</p>
 						</div>
 
-						<!-- Enhanced categories and tags section -->
 						<div class="flex flex-wrap gap-8">
 							{#if post.categories.length > 0}
 								<div class="space-y-4">
@@ -192,7 +187,6 @@
 				</div>
 			</header>
 
-			<!-- Enhanced content section -->
 			<div class="prose-content px-8 lg:px-12 pb-8 lg:pb-12">
 				<div class="border-t border-neutral-700/50 pt-8 lg:pt-12">
 					{@html post.content}
@@ -200,14 +194,12 @@
 			</div>
 		</article>
 
-		<!-- Enhanced Related Posts section -->
 		<div
 			class={`mt-12 ${mounted ? 'animate-in slide-in-from-bottom-8 duration-700 delay-300' : ''}`}
 		>
 			<RelatedPosts currentPost={post} {allPosts} />
 		</div>
 
-		<!-- Enhanced footer -->
 		<footer
 			class={`mt-12 ${mounted ? 'animate-in slide-in-from-bottom-8 duration-700 delay-500' : ''}`}
 		>

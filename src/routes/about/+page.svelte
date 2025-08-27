@@ -23,54 +23,40 @@
 />
 
 <PageContainer>
-	<!-- Enhanced hero section -->
 	<div class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700' : ''}`}>
-		<div
-			class="bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl p-8 lg:p-12 shadow-xl shadow-black/10"
-		>
-			<div class="flex items-center gap-4 mb-6">
+		<div class="space-y-4">
+			<div class="flex items-center gap-4">
 				<div
 					class="w-12 h-12 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-xl flex items-center justify-center border border-red-500/30"
 				>
 					<User class="w-6 h-6 text-red-400" />
 				</div>
-				<div>
-					<h1 class="text-3xl lg:text-4xl font-bold text-white">About Me</h1>
-					<p class="text-neutral-400">Get to know more about my background and skills</p>
-				</div>
+				<h1 class="text-3xl lg:text-4xl font-bold text-white flex items-center gap-3">
+					<span class="w-1.5 h-10 bg-gradient-to-b from-red-400 to-red-500 rounded-full"></span>
+					About Me
+				</h1>
 			</div>
+			<p class="text-neutral-400 ml-16">Get to know more about my background and skills</p>
+		</div>
 
-			<div class="space-y-6 ">
-				<p class="text-lg lg:text-xl text-neutral-300 leading-relaxed">
-					I'm a passionate <span class="text-red-400 font-semibold">software developer</span> from
-					<span class="text-blue-400 font-semibold">Argentina 🇦🇷</span>. Currently working as a
-					<span class="text-green-400 font-semibold">Tech Leader</span>, I love creating innovative
-					solutions and leading development teams.
-				</p>
+		<div class="space-y-6 ml-16">
+			<p class="text-lg lg:text-xl text-neutral-300 leading-relaxed">
+				I'm a passionate <span class="font-semibold">software developer</span> from
+				<span class="font-semibold">Argentina 🇦🇷</span>. Currently working as a
+				<span class="font-semibold">Tech Leader</span>, I love creating innovative solutions and
+				leading development teams.
+			</p>
 
-				<p class="text-lg text-neutral-300 leading-relaxed">
-					In my free time, I dive deep into <span class="text-purple-400 font-semibold"
-						>game development</span
-					>
-					and
-					<span class="text-yellow-400 font-semibold">cybersecurity</span> - always exploring new technologies
-					and pushing the boundaries of what's possible.
-				</p>
+			<p class="text-lg text-neutral-300 leading-relaxed">
+				In my free time, I dive deep into <span class="font-semibold">game development</span>
+				and
+				<span class="font-semibold">cybersecurity</span> - always exploring new technologies and pushing
+				the boundaries of what's possible.
+			</p>
 
-				<div class="flex flex-wrap gap-3 pt-4">
-					{#each ['Tech Leadership', 'Full-Stack Development', 'Game Development', 'Cybersecurity', 'Team Mentoring'] as skill}
-						<span
-							class="px-4 py-2 bg-red-500/10 text-red-300 rounded-full text-sm border border-red-500/20 font-medium"
-						>
-							{skill}
-						</span>
-					{/each}
-				</div>
-			</div>
 		</div>
 	</div>
 
-	<!-- Enhanced Technologies section -->
 	<div
 		class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-200' : ''}`}
 	>
@@ -102,18 +88,16 @@
 		</div>
 	</div>
 
-	<!-- Enhanced separator -->
 	<div class="flex items-center justify-center my-16">
 		<div
-			class="h-px bg-gradient-to-r from-transparent via-red-500 to-transparent w-full max-w-md relative"
+			class="h-px bg-gradient-to-r from-transparent via-green-500 to-transparent w-full max-w-md relative"
 		>
 			<div
-				class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-red-500 rounded-full shadow-lg shadow-red-500/50"
+				class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-green-500 rounded-full shadow-lg shadow-green-500/50"
 			></div>
 		</div>
 	</div>
 
-	<!-- Enhanced Languages section -->
 	<div
 		class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-400' : ''}`}
 	>
@@ -146,26 +130,6 @@
 					/>
 				</div>
 			{/each}
-		</div>
-	</div>
-
-	<!-- Enhanced closing section -->
-	<div class={`mt-24 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-600' : ''}`}>
-		<div
-			class="bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl p-8 lg:p-12 shadow-xl shadow-black/10 text-center"
-		>
-			<div class="flex items-center justify-center gap-2 text-neutral-400 mb-4">
-				<Award class="w-5 h-5 text-yellow-400" />
-				<span class="text-lg font-medium">Always Learning, Always Growing</span>
-			</div>
-			<p class="text-neutral-300 text-lg leading-relaxed max-w-2xl mx-auto">
-				Technology evolves fast, and so do I. I'm always exploring new frameworks, learning emerging
-				technologies, and finding better ways to solve complex problems.
-			</p>
-			<div class="flex items-center justify-center gap-2 mt-6">
-				<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-				<span class="text-red-400 font-medium">Currently exploring AI/ML integration</span>
-			</div>
 		</div>
 	</div>
 </PageContainer>

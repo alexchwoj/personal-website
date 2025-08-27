@@ -27,7 +27,6 @@
 />
 
 <PageContainer>
-	<!-- Enhanced Professional Experience section -->
 	<div class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700' : ''}`}>
 		<div class="space-y-4">
 			<div class="flex items-center gap-4">
@@ -65,18 +64,16 @@
 		</div>
 	</div>
 
-	<!-- Enhanced separator -->
 	<div class="flex items-center justify-center my-16">
 		<div
-			class="h-px bg-gradient-to-r from-transparent via-red-500 to-transparent w-full max-w-md relative"
+			class="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-full max-w-md relative"
 		>
 			<div
-				class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-red-500 rounded-full shadow-lg shadow-red-500/50"
+				class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-purple-500 rounded-full shadow-lg shadow-purple-500/50"
 			></div>
 		</div>
 	</div>
 
-	<!-- Enhanced Personal Projects section -->
 	<div
 		class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-300' : ''}`}
 	>
@@ -114,7 +111,6 @@
 		</div>
 	</div>
 
-	<!-- Enhanced separator -->
 	<div class="flex items-center justify-center my-24">
 		<div
 			class="h-px bg-gradient-to-r from-transparent via-green-500 to-transparent w-full max-w-md relative"
@@ -125,7 +121,6 @@
 		</div>
 	</div>
 
-	<!-- Enhanced Education section -->
 	<div
 		class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-500' : ''}`}
 	>
@@ -160,44 +155,6 @@
 					/>
 				</div>
 			{/each}
-		</div>
-	</div>
-
-	<!-- Enhanced summary section -->
-	<div class={`mt-16 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-800' : ''}`}>
-		<div
-			class="bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl p-8 lg:p-12 shadow-xl shadow-black/10"
-		>
-			<div class="text-center space-y-6">
-				<div class="flex items-center justify-center gap-2 text-neutral-400">
-					<FolderOpen class="w-6 h-6 text-red-400" />
-					<span class="text-xl font-semibold">Ready for New Challenges</span>
-				</div>
-
-				<p class="text-lg text-neutral-300 leading-relaxed max-w-3xl mx-auto">
-					With a solid foundation in software development and leadership, I'm always excited to take
-					on new challenges and contribute to innovative projects. Let's build something amazing
-					together!
-				</p>
-
-				<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-					<a
-						href="/contact"
-						class="group inline-flex items-center gap-3 px-8 py-4 bg-red-500 hover:bg-red-600 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25"
-					>
-						<Briefcase class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-						Let's Work Together
-					</a>
-
-					<a
-						href="/blog"
-						class="group inline-flex items-center gap-3 px-8 py-4 bg-neutral-800/50 hover:bg-neutral-700/70 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 border border-neutral-700 hover:border-neutral-600 backdrop-blur-sm"
-					>
-						<FolderOpen class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-						Read My Blog
-					</a>
-				</div>
-			</div>
 		</div>
 	</div>
 </PageContainer>

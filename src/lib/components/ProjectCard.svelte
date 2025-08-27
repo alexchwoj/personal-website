@@ -9,7 +9,6 @@
 <div
 	class="group h-full flex flex-col bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-xl overflow-hidden hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1"
 >
-	<!-- Header section with link -->
 	<div class="flex-1 p-6">
 		<div class="flex items-center justify-between mb-4">
 			<div class="flex items-center gap-3">
@@ -38,10 +37,8 @@
 			</a>
 		</div>
 
-		<!-- Description -->
 		<p class="text-neutral-300 leading-relaxed mb-6">{description}</p>
 
-		<!-- Technologies section -->
 		<div class="space-y-3">
 			<div
 				class="flex items-center gap-2 text-sm font-semibold text-neutral-400 uppercase tracking-wider"
@@ -62,7 +59,6 @@
 		</div>
 	</div>
 
-	<!-- Footer with action -->
 	<div class="border-t border-neutral-700/50 p-4 bg-neutral-800/30">
 		<a
 			href={url}

@@ -25,7 +25,6 @@
 <div
 	class="group bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-xl p-6 lg:p-8 {hoverBorderClass} hover:shadow-xl transition-all duration-300 hover:-translate-y-1 mb-6"
 >
-	<!-- Header section -->
 	<div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-6">
 		<div class="space-y-3">
 			<div class="flex items-center gap-3">
@@ -72,7 +71,6 @@
 		</div>
 	</div>
 
-	<!-- Description section -->
 	{#if descriptions.length > 0}
 		<div class="space-y-3 pl-13">
 			<h4

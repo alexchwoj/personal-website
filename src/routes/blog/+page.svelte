@@ -85,7 +85,6 @@
 
 <PageContainer>
 	<div class="w-full">
-		<!-- Header Section -->
 		{#if data.posts.length === 0}
 			<div
 				class="bg-gradient-to-br from-neutral-900/80 to-neutral-800/60 border border-neutral-700 rounded-2xl p-12"
@@ -110,7 +109,6 @@
 				</div>
 			</div>
 		{:else}
-			<!-- Search and Filter Section -->
 			<div
 				class="bg-gradient-to-br from-neutral-900/80 to-neutral-800/60 border border-neutral-700 rounded-2xl p-8 mb-8"
 			>
@@ -148,7 +146,6 @@
 				</div>
 			</div>
 
-			<!-- Posts Grid -->
 			<div class="max-w-6xl mx-auto mb-8">
 				{#if filteredPosts.length === 0}
 					<div
@@ -212,7 +209,6 @@
 				{/if}
 			</div>
 
-			<!-- Statistics Section -->
 			<div class="max-w-4xl mx-auto">
 				<BlogStats posts={data.posts} />
 			</div>

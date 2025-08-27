@@ -85,7 +85,6 @@
 			</div>
 		{/if}
 
-		<!-- Progress bar visualization -->
 		<div class="w-full bg-neutral-800 rounded-full h-2 overflow-hidden">
 			<div
 				class="h-2 rounded-full transition-all duration-500 bg-gradient-to-r {level.toLowerCase() ===

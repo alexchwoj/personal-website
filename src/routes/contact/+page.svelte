@@ -26,47 +26,10 @@
 />
 
 <PageContainer>
-	<!-- Enhanced hero section -->
-	<div class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700' : ''}`}>
-		<div
-			class="bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl p-8 lg:p-12 shadow-xl shadow-black/10"
-		>
-			<div class="flex items-center gap-4 mb-6">
-				<div
-					class="w-12 h-12 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center border border-green-500/30"
-				>
-					<MessageCircle class="w-6 h-6 text-green-400" />
-				</div>
-				<div>
-					<h1 class="text-3xl lg:text-4xl font-bold text-white">Let's Connect</h1>
-					<p class="text-neutral-400">Ready to start a conversation? I'd love to hear from you</p>
-				</div>
-			</div>
-
-			<div class="space-y-6">
-				<p class="text-lg lg:text-xl text-neutral-300 leading-relaxed">
-					Whether you have a project in mind, want to collaborate, or just want to say hello - I'm
-					always excited to connect with fellow developers, designers, and innovators.
-				</p>
-
-				<div class="flex flex-wrap gap-3 pt-4">
-					{#each ['Available for Projects', 'Open to Collaboration', 'Always Learning', 'Remote Friendly'] as status}
-						<span
-							class="px-4 py-2 bg-green-500/10 text-green-300 rounded-full text-sm border border-green-500/20 font-medium"
-						>
-							{status}
-						</span>
-					{/each}
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Enhanced contact methods -->
 	<div
 		class={`space-y-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-200' : ''}`}
 	>
-		<div class="space-y-4 mt-8">
+		<div class="space-y-4">
 			<div class="flex items-center gap-4">
 				<div
 					class="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg flex items-center justify-center border border-blue-500/30"
@@ -82,7 +45,6 @@
 		</div>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<!-- LinkedIn Card -->
 			<div
 				class={`group bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-xl p-6 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1 ${
 					mounted ? 'animate-in slide-in-from-bottom duration-500 delay-300' : ''
@@ -116,7 +78,6 @@
 				</a>
 			</div>
 
-			<!-- Email Card -->
 			<div
 				class={`group bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-xl p-6 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/10 transition-all duration-300 hover:-translate-y-1 ${
 					mounted ? 'animate-in slide-in-from-bottom duration-500 delay-450' : ''
@@ -165,8 +126,7 @@
 		</div>
 	</div>
 
-	<!-- Enhanced response time info -->
-	<div class={`mt-24 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-600' : ''}`}>
+	<div class={`mt-8 ${mounted ? 'animate-in slide-in-from-bottom duration-700 delay-600' : ''}`}>
 		<div
 			class="bg-gradient-to-br from-neutral-900/90 to-neutral-800/50 backdrop-blur-md border border-neutral-700/70 rounded-2xl p-8 lg:p-12 shadow-xl shadow-black/10"
 		>
