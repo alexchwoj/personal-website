@@ -30,23 +30,16 @@
 <BlogJsonLd {post} />
 
 <PageContainer>
-	<div class="max-w-4xl mx-auto">
+	<div class="w-full max-w-none">
 		<Breadcrumb items={breadcrumbItems} />
 
-		<nav class="mb-8">
-			<a
-				href="/blog"
-				class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
-			>
-				<ArrowLeft class="w-4 h-4" />
-				Back to blog
-			</a>
-		</nav>
-
-		<article class="prose prose-invert prose-lg max-w-none">
-			<header class="mb-12 not-prose">
+		<!-- Article with consistent card styling -->
+		<article
+			class="bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-2xl overflow-hidden"
+		>
+			<header class="p-8 border-b border-neutral-700/50">
 				{#if post.coverImage}
-					<div class="aspect-video rounded-lg overflow-hidden mb-8">
+					<div class="aspect-video rounded-xl overflow-hidden mb-8 border border-neutral-700/50">
 						<img src={post.coverImage} alt={post.title} class="w-full h-full object-cover" />
 					</div>
 				{/if}
@@ -54,6 +47,7 @@
 				<div class="space-y-6">
 					<div class="flex flex-wrap items-center gap-4 text-sm text-neutral-400">
 						<div class="flex items-center gap-2">
+							<div class="w-1.5 h-1.5 bg-red-500 rounded-full"></div>
 							<Calendar class="w-4 h-4" />
 							<time datetime={post.publishDate}>
 								{formatDate(post.publishDate, post.language)}
@@ -70,10 +64,12 @@
 							<span>{post.author}</span>
 						</div>
 
-						<div class="flex items-center gap-2">
-							<Globe class="w-4 h-4" />
-							<span class="uppercase">{post.language}</span>
-						</div>
+						<span
+							class="text-xs px-2 py-1 bg-red-500/20 text-red-300 rounded-full uppercase font-medium border border-red-500/30"
+						>
+							<Globe class="w-3 h-3 inline mr-1" />
+							{post.language}
+						</span>
 					</div>
 
 					<h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -87,14 +83,18 @@
 					<div class="flex flex-wrap gap-6">
 						{#if post.categories.length > 0}
 							<div>
-								<h3 class="text-sm font-medium text-neutral-400 mb-2">Categories</h3>
+								<h3 class="text-sm font-medium text-neutral-400 mb-3 flex items-center gap-2">
+									<span class="w-2 h-2 bg-red-500 rounded-full"></span>
+									Categories
+								</h3>
 								<div class="flex flex-wrap gap-2">
 									{#each post.categories as category}
-										<span
-											class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm border border-blue-800/50"
+										<a
+											href="/blog/category/{encodeURIComponent(category)}"
+											class="px-3 py-1.5 bg-red-500/10 text-red-300 rounded-full text-sm border border-red-500/20 hover:bg-red-500/20 hover:border-red-500/40 transition-all duration-200 font-medium"
 										>
 											{category}
-										</span>
+										</a>
 									{/each}
 								</div>
 							</div>
@@ -102,10 +102,15 @@
 
 						{#if post.tags.length > 0}
 							<div>
-								<h3 class="text-sm font-medium text-neutral-400 mb-2">Tags</h3>
+								<h3 class="text-sm font-medium text-neutral-400 mb-3 flex items-center gap-2">
+									<span class="w-2 h-2 bg-red-500 rounded-full"></span>
+									Tags
+								</h3>
 								<div class="flex flex-wrap gap-2">
 									{#each post.tags as tag}
-										<span class="px-3 py-1 bg-neutral-800 text-neutral-300 rounded-full text-sm">
+										<span
+											class="text-xs px-2 py-1 text-neutral-400 hover:text-red-400 cursor-pointer transition-colors duration-200 bg-neutral-800/50 rounded-md hover:bg-neutral-700/50"
+										>
 											#{tag}
 										</span>
 									{/each}
@@ -116,22 +121,35 @@
 				</div>
 			</header>
 
-			<div class="prose-content">
+			<!-- Content section with improved styling -->
+			<div class="prose-content p-8">
 				{@html post.content}
 			</div>
 		</article>
 
-		<RelatedPosts currentPost={post} {allPosts} />
+		<!-- Related Posts section -->
+		<div class="mt-8">
+			<RelatedPosts currentPost={post} {allPosts} />
+		</div>
 
-		<footer class="mt-16 pt-8 border-t border-neutral-800">
-			<div class="text-center">
-				<a
-					href="/blog"
-					class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-				>
-					<ArrowLeft class="w-4 h-4" />
-					Back to all posts
-				</a>
+		<!-- Footer with consistent styling -->
+		<footer class="mt-8">
+			<div
+				class="bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-2xl p-8"
+			>
+				<div class="text-center">
+					<div class="flex items-center justify-center gap-2 text-neutral-400 mb-4">
+						<span class="w-2 h-2 bg-red-500 rounded-full"></span>
+						<span class="text-sm">Thanks for reading!</span>
+					</div>
+					<a
+						href="/blog"
+						class="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-xl font-medium transition-all duration-200 hover:scale-105"
+					>
+						<ArrowLeft class="w-4 h-4" />
+						Back to all posts
+					</a>
+				</div>
 			</div>
 		</footer>
 	</div>
@@ -139,15 +157,30 @@
 
 <style>
 	:global(.prose-content h1) {
-		@apply text-3xl font-bold text-white mt-8 mb-4;
+		@apply text-3xl font-bold text-white mt-8 mb-6 flex items-center gap-3;
+	}
+
+	:global(.prose-content h1:before) {
+		content: '';
+		@apply w-1 h-8 bg-red-500 rounded-full;
 	}
 
 	:global(.prose-content h2) {
-		@apply text-2xl font-bold text-white mt-8 mb-4;
+		@apply text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3;
+	}
+
+	:global(.prose-content h2:before) {
+		content: '';
+		@apply w-1 h-6 bg-red-400 rounded-full;
 	}
 
 	:global(.prose-content h3) {
-		@apply text-xl font-bold text-white mt-6 mb-3;
+		@apply text-xl font-bold text-white mt-6 mb-3 flex items-center gap-2;
+	}
+
+	:global(.prose-content h3:before) {
+		content: '';
+		@apply w-0.5 h-5 bg-red-300 rounded-full;
 	}
 
 	:global(.prose-content h4) {
@@ -155,54 +188,107 @@
 	}
 
 	:global(.prose-content p) {
-		@apply text-neutral-300 leading-relaxed mb-4;
+		@apply text-neutral-300 leading-relaxed mb-6;
 	}
 
 	:global(.prose-content a) {
-		@apply text-blue-400 hover:text-blue-300 underline transition-colors;
+		@apply text-red-400 hover:text-red-300 underline transition-colors duration-200;
 	}
 
-	:global(.prose-content ul, .prose-content ol) {
-		@apply text-neutral-300 ml-6 mb-4;
+	:global(.prose-content ul) {
+		@apply text-neutral-300 ml-6 mb-6;
 	}
 
-	:global(.prose-content li) {
+	:global(.prose-content ol) {
+		@apply text-neutral-300 ml-6 mb-6;
+	}
+
+	:global(.prose-content ul > li) {
 		@apply mb-2;
 	}
 
+	:global(.prose-content ol > li) {
+		@apply mb-2;
+	}
+
+	:global(.prose-content li) {
+		@apply relative;
+	}
+
+	:global(.prose-content ul li:before) {
+		content: '';
+		@apply absolute -left-4 top-2.5 w-1.5 h-1.5 bg-red-500 rounded-full;
+	}
+
 	:global(.prose-content blockquote) {
-		@apply border-l-4 border-blue-500 pl-4 italic text-neutral-400 my-6;
+		@apply border-l-4 border-red-500 bg-neutral-800/30 pl-6 pr-4 py-4 italic text-neutral-300 my-8 rounded-r-xl;
+	}
+
+	:global(.prose-content blockquote:before) {
+		content: '"';
+		@apply text-4xl text-red-500 font-bold mr-2;
 	}
 
 	:global(.prose-content code) {
-		@apply bg-neutral-800 text-blue-300 px-2 py-1 rounded text-sm;
+		@apply bg-neutral-800 text-red-300 px-2 py-1 rounded-md text-sm border border-neutral-700;
 	}
 
 	:global(.prose-content pre) {
-		@apply bg-neutral-900 border border-neutral-700 rounded-lg p-4 overflow-x-auto my-6;
+		@apply bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 border border-neutral-700 rounded-xl p-6 overflow-x-auto my-8 backdrop-blur-sm;
 	}
 
 	:global(.prose-content pre code) {
-		@apply bg-transparent text-neutral-300 p-0;
+		@apply bg-transparent text-neutral-300 p-0 border-0;
 	}
 
 	:global(.prose-content img) {
-		@apply rounded-lg my-6 max-w-full h-auto;
+		@apply rounded-xl my-8 max-w-full h-auto border border-neutral-700/50 shadow-lg;
 	}
 
 	:global(.prose-content table) {
-		@apply w-full border-collapse border border-neutral-700 my-6;
-	}
-
-	:global(.prose-content th, .prose-content td) {
-		@apply border border-neutral-700 px-4 py-2 text-left;
+		@apply w-full border-collapse my-8 bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm rounded-xl overflow-hidden border border-neutral-700;
 	}
 
 	:global(.prose-content th) {
-		@apply bg-neutral-800 text-white font-medium;
+		@apply px-6 py-4 text-left bg-neutral-800/50 text-white font-medium;
+		border-right: 1px solid rgb(64 64 64); /* border-neutral-700 */
+		border-bottom: 1px solid rgb(82 82 82); /* border-neutral-600 */
 	}
 
 	:global(.prose-content td) {
-		@apply text-neutral-300;
+		@apply px-6 py-4 text-left text-neutral-300;
+		border-right: 1px solid rgb(64 64 64); /* border-neutral-700 */
+		border-bottom: 1px solid rgb(64 64 64 / 0.5); /* border-neutral-700/50 */
+	}
+
+	:global(.prose-content th:last-child) {
+		border-right: 0;
+	}
+
+	:global(.prose-content td:last-child) {
+		border-right: 0;
+	}
+
+	:global(.prose-content hr) {
+		@apply border-0 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent my-12;
+	}
+
+	/* Enhanced focus states for accessibility */
+	:global(.prose-content a:focus) {
+		@apply outline-2 outline-red-500 outline-offset-2;
+	}
+
+	/* Improved spacing and typography */
+	:global(.prose-content) {
+		@apply text-lg leading-relaxed;
+	}
+
+	/* Custom styling for specific elements */
+	:global(.prose-content strong) {
+		@apply text-white font-semibold;
+	}
+
+	:global(.prose-content em) {
+		@apply text-red-300;
 	}
 </style>

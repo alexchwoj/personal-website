@@ -81,7 +81,7 @@
 				href="/blog/{post.slug}"
 				class="inline-flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-500 text-white text-sm font-medium rounded-lg transition-all duration-200 hover:scale-105 group/button"
 			>
-				Read more
+				Read
 				<svg class="w-4 h-4 group-hover/button:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 				</svg>

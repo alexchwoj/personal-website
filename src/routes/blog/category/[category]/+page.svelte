@@ -35,7 +35,7 @@
 			>
 				Category
 			</div>
-			<h1 class="text-4xl md:text-5xl font-bold text-white mb-4 text-shadow">
+			<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
 				<span class="border-b-2 border-b-red-500">{category}</span>
 			</h1>
 			<p class="text-xl text-neutral-300">

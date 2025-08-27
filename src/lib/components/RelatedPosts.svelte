@@ -43,8 +43,13 @@
 </script>
 
 {#if relatedPosts.length > 0}
-	<section class="mt-16 pt-8 border-t border-neutral-800">
-		<h2 class="text-2xl font-bold text-white mb-8">Related Posts</h2>
+	<section
+		class="bg-gradient-to-br from-neutral-900/80 to-neutral-800/40 backdrop-blur-sm border border-neutral-700 rounded-2xl p-8"
+	>
+		<h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+			<span class="w-1 h-6 bg-red-500 rounded-full"></span>
+			Related Posts
+		</h2>
 
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#each relatedPosts as post}

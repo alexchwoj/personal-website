@@ -113,7 +113,7 @@
 											href="/blog/{post.slug}"
 											class="inline-flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-500 text-white rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
 										>
-											Read more
+											Read
 											<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path
 													stroke-linecap="round"
