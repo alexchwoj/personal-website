@@ -86,29 +86,6 @@
 <PageContainer>
 	<div class="w-full">
 		<!-- Header Section -->
-		<div
-			class="bg-gradient-to-br from-neutral-900/80 via-neutral-800/60 to-neutral-900/80 border border-neutral-700 rounded-2xl p-8 mb-8"
-		>
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
-					<span class="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent"
-						>Blog</span
-					>
-				</h1>
-				<p class="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-					Insights on software development, technology, and programming
-				</p>
-
-				<a
-					href="/blog/archive"
-					class="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/25"
-				>
-					<Archive class="w-5 h-5" />
-					View Archive
-				</a>
-			</div>
-		</div>
-
 		{#if data.posts.length === 0}
 			<div
 				class="bg-gradient-to-br from-neutral-900/80 to-neutral-800/60 border border-neutral-700 rounded-2xl p-12"
@@ -204,7 +181,7 @@
 									selectedLanguage = null;
 									updateFilteredPosts();
 								}}
-								class="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-xl font-medium transition-all duration-200 hover:scale-105"
+								class="px-6 py-3 bg-red-500 hover:bg-red-500 text-white rounded-xl font-medium transition-all duration-200 hover:scale-105"
 							>
 								Clear all filters
 							</button>

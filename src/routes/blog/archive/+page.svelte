@@ -33,7 +33,7 @@
 		</nav>
 
 		<div class="text-center mb-12">
-			<h1 class="text-4xl md:text-5xl font-bold text-white mb-4 text-shadow">
+			<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
 				<span class="border-b-2 border-b-red-500">Blog Archive</span>
 			</h1>
 			<p class="text-xl text-neutral-300">All posts organized by year</p>
@@ -111,7 +111,7 @@
 									<div class="flex-shrink-0">
 										<a
 											href="/blog/{post.slug}"
-											class="inline-flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
+											class="inline-flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-500 text-white rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
 										>
 											Read more
 											<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

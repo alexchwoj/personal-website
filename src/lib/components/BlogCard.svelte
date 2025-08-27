@@ -79,7 +79,7 @@
 
 			<a
 				href="/blog/{post.slug}"
-				class="inline-flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-sm font-medium rounded-lg transition-all duration-200 hover:scale-105 group/button"
+				class="inline-flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-500 text-white text-sm font-medium rounded-lg transition-all duration-200 hover:scale-105 group/button"
 			>
 				Read more
 				<svg class="w-4 h-4 group-hover/button:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
