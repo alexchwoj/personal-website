@@ -1,82 +1,23 @@
 <script lang="ts">
-	import Image from '$lib/components/Image.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
 	import Title from '$lib/components/Title.svelte';
-	import { fly } from 'svelte/transition';
-	import { ExternalLink } from 'lucide-svelte';
-
-	let technologies = [
-		{
-			category: 'Python',
-			items: ['Flask', 'Django', 'FastAPI']
-		},
-		{
-			category: 'Javascript',
-			items: ['Vanilla', 'TypeScript', 'NodeJS', 'jQuery', 'Electron', 'JerryScript']
-		},
-		{
-			category: 'Scripting',
-			items: ['Lua', 'Pawn', 'AngelScript', 'Bash', 'PowerShell']
-		},
-		{
-			category: 'Databases',
-			items: ['MariaDB', 'MySQL', 'PostgreSQL', 'MongoDB']
-		},
-		{
-			category: 'CI/CD',
-			items: ['Jenkins', 'AWS CodeDeploy', 'AWS CodePipeline', 'GitHub Actions']
-		},
-		{
-			category: 'Virtualization',
-			items: ['LxC', 'KVM', 'Proxmox', 'VirtualBox', 'VMWare', 'Hyper-V', 'Docker']
-		},
-		{
-			category: 'VPN',
-			items: ['Wireguard', 'Twingate']
-		},
-		{
-			category: 'Cloud',
-			items: ['Amazon Web Services', 'Azure', 'OVH']
-		},
-		{
-			category: 'Brokers',
-			items: ['RabbitMQ', 'Redis']
-		},
-		{
-			category: 'MFT',
-			items: ['Cerberus FTP', 'GoAnywhere', 'CDATA ARC', 'Crush FTP']
-		},
-		{
-			category: 'Web Desing',
-			items: ['HTML5', 'CSS', 'Svelte', 'Bootstrap', 'Tailwind CSS']
-		},
-		{
-			category: 'Web Servers',
-			items: ['Apache', 'Nginx', 'IIS']
-		},
-		{
-			category: 'CRM',
-			items: ['Bitrix', 'Monday', 'Slack']
-		},
-		{
-			category: 'Other',
-			items: ['Unix', 'Git', 'Unity3D', 'C#', 'C/CPP']
-		}
-	];
+	import Paragraph from '$lib/components/Paragraph.svelte';
+	import TechnologyCard from '$lib/components/TechnologyCard.svelte';
+	import LanguageCard from '$lib/components/LanguageCard.svelte';
+	import PageContainer from '$lib/components/PageContainer.svelte';
+	import SEO from '$lib/components/SEO.svelte';
+	import { TECHNOLOGIES, LANGUAGES, SITE_CONFIG } from '$lib/constants';
 </script>
 
-<svelte:head>
-	<title>About Me</title>
-</svelte:head>
+<SEO
+	title="About Me - {SITE_CONFIG.author}"
+	description="Learn about {SITE_CONFIG.author}'s background, skills, and experience as a software developer from Argentina"
+	canonical="{SITE_CONFIG.url}/about"
+/>
 
-<div
-	class="max-w-screen-xl p-8 mx-auto mt-8 bg-neutral-900 rounded-none sm:rounded-lg text-neutral-400"
-	in:fly={{ x: -200, duration: 300, delay: 300 }}
-	out:fly={{ x: 200, duration: 300 }}
->
+<PageContainer>
 	<Title>About Me</Title>
 	<Paragraph>
-		I'm a software developer from Argentina. Currently working as a Tech Lead, with a passion for
+		I'm a software developer from Argentina. Currently working as a Tech Leader, with a passion for
 		game development and cybersecurity in my free time.
 	</Paragraph>
 
@@ -84,39 +25,19 @@
 
 	<Title>Technologies</Title>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-		{#each technologies as techCategory}
-			<div class="p-4 bg-neutral-800 border border-neutral-700 shadow-md rounded-lg">
-				<h3 class="text-md font-semibold text-neutral-200 mb-2">{techCategory.category}</h3>
-				<ul class="list-disc pl-6">
-					{#each techCategory.items as techItem}
-						<li class="text-neutral-400">{techItem}</li>
-					{/each}
-				</ul>
-			</div>
+		{#each TECHNOLOGIES as techCategory}
+			<TechnologyCard category={techCategory.category} items={techCategory.items} />
 		{/each}
 	</div>
 
 	<Title>Languages</Title>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-		<div class="p-4 bg-neutral-800 border border-neutral-700 shadow-md rounded-lg">
-			<h3 class="text-md font-semibold text-neutral-200 mb-2">
-				Spanish
-			</h3>
-			<p class="text-neutral-400">Native</p>
-		</div>
-
-		<div class="p-4 bg-neutral-800 border border-neutral-700 shadow-md rounded-lg">
-			<h3 class="text-md font-semibold text-neutral-200 mb-2">
-				English
-			</h3>
-			<div class="flex items-center gap-2">
-				<p class="text-neutral-400">B2 Upper Intermediate</p>
-				<a href="https://cert.efset.org/es/LCCo9j" class="text-neutral-400 hover:text-red-500 transition-all">
-					<ExternalLink size={16} />
-				</a>
-			</div>
-		</div>
+		{#each LANGUAGES as language}
+			<LanguageCard
+				language={language.language}
+				level={language.level}
+				certificationUrl={language.certificationUrl}
+			/>
+		{/each}
 	</div>
-</div>
-
-<div class="mt-8"></div>
+</PageContainer>

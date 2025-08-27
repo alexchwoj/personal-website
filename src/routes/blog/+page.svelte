@@ -1,18 +1,22 @@
 <script lang="ts">
-	import Image from '$lib/components/Image.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
-	import Title from '$lib/components/Title.svelte';
-	import { fly } from 'svelte/transition';
+	import PageContainer from '$lib/components/PageContainer.svelte';
+	import SEO from '$lib/components/SEO.svelte';
+	import { SITE_CONFIG } from '$lib/constants';
 </script>
 
-<svelte:head>
-	<title>Blog</title>
-</svelte:head>
+<SEO
+	title="Blog - {SITE_CONFIG.author}"
+	description="Read {SITE_CONFIG.author}'s blog posts about software development, technology, and programming insights"
+	canonical="{SITE_CONFIG.url}/blog"
+/>
 
-<div
-	class="max-w-screen-xl p-8 mx-auto mt-8 mb-12 bg-neutral-900 rounded-none sm:rounded-lg text-neutral-400"
-	in:fly={{ x: -200, duration: 300, delay: 300 }}
-	out:fly={{ x: 200, duration: 300 }}
->
-	<p>⚠️ Under construction hehe</p>
-</div>
+<PageContainer>
+	<div class="text-center">
+		<h1 class="text-white font-bold mb-4 text-xl">Blog</h1>
+		<p class="text-yellow-500 text-lg">⚠️ Under construction</p>
+		<p class="text-neutral-400 mt-4">
+			Stay tuned for upcoming articles about software development, cybersecurity, and technology
+			insights.
+		</p>
+	</div>
+</PageContainer>

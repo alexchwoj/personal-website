@@ -44,9 +44,10 @@
 	</div>
 {/if}
 
-<img
-	{alt}
-	{src}
-	class="h-auto max-w-full rounded-xl border-2 border-transparent hover:border-red-500 shadow-xl shadow-transparent hover:shadow-red-500/50 transition-all duration-300 hoverable"
+<button
+	class="h-auto max-w-full rounded-xl border-2 border-transparent hover:border-red-500 shadow-xl shadow-transparent hover:shadow-red-500/50 transition-all duration-300 hoverable cursor-pointer bg-transparent p-0 block"
 	on:click={openImage}
-/>
+	aria-label="Click to enlarge image"
+>
+	<img {alt} {src} class="h-auto max-w-full rounded-xl block" />
+</button>

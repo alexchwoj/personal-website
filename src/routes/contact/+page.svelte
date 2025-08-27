@@ -1,26 +1,29 @@
 <script lang="ts">
-	import Image from '$lib/components/Image.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
 	import Title from '$lib/components/Title.svelte';
-	import { fly } from 'svelte/transition';
+	import Paragraph from '$lib/components/Paragraph.svelte';
+	import PageContainer from '$lib/components/PageContainer.svelte';
+	import SEO from '$lib/components/SEO.svelte';
+	import { SITE_CONFIG } from '$lib/constants';
 </script>
 
-<svelte:head>
-	<title>Contact</title>
-</svelte:head>
+<SEO
+	title="Contact - {SITE_CONFIG.author}"
+	description="Get in touch with {SITE_CONFIG.author} for software development projects or collaborations"
+	canonical="{SITE_CONFIG.url}/contact"
+/>
 
-<div
-	class="max-w-screen-xl p-8 mx-auto mt-8 mb-12 bg-neutral-900 rounded-none sm:rounded-lg text-neutral-400"
-	in:fly={{ x: -200, duration: 300, delay: 300 }}
-	out:fly={{ x: 200, duration: 300 }}
->
-	<Title>How to contact me</Title>
+<PageContainer>
+	<Title>How to Contact Me</Title>
 	<Paragraph>
 		You can contact me by sending me a message on my <a
-			class=" text-red-500"
-			href="https://www.linkedin.com/in/alexander-chwojewski/">LinkedIn</a
+			class="text-red-500 hover:text-red-400 transition-colors"
+			href="https://www.linkedin.com/in/alexander-chwojewski/"
+			target="_blank"
+			rel="noopener noreferrer">LinkedIn</a
 		>
 		or writing me an email at
-		<a class=" text-red-500" href="mailto:alexander@chwojewski.com">alexander@chwojewski.com</a>
+		<a class="text-red-500 hover:text-red-400 transition-colors" href="mailto:{SITE_CONFIG.email}"
+			>{SITE_CONFIG.email}</a
+		>
 	</Paragraph>
-</div>
+</PageContainer>

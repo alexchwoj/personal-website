@@ -1,23 +1,25 @@
 <script lang="ts">
 	import RotatingObject from '$lib/components/RotatingObject.svelte';
+	import SocialLink from '$lib/components/SocialLink.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 	import { Canvas } from '@threlte/core';
-
-	import { scale, fly } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
+	import { fly } from 'svelte/transition';
+	import { SOCIAL_LINKS, SITE_CONFIG } from '$lib/constants';
 
 	import github from '$lib/icons/github.svg';
-	import instagram from '$lib/icons/instagram.svg';
 	import linkedin from '$lib/icons/linkedin.svg';
 </script>
 
-<svelte:head>
-	<title>Alexander Chwojewski</title>
-</svelte:head>
+<SEO
+	title="{SITE_CONFIG.title} | Portfolio"
+	description={SITE_CONFIG.description}
+	canonical={SITE_CONFIG.url}
+/>
 
 <div class="h-fit">
 	<div class="absolute inset-0 -z-10">
 		<Canvas>
-			<RotatingObject></RotatingObject>
+			<RotatingObject />
 		</Canvas>
 	</div>
 
@@ -27,27 +29,19 @@
 		out:fly={{ x: 200, duration: 300 }}
 	>
 		<h1 class="text-white text-2xl sm:text-4xl font-bold mb-8 text-center text-shadow">
-			Sup!<br />
+			Hello!<br />
 			I'm <span class="border-b-2 border-b-red-500">Alexander</span>, a
 			<span class="border-b-2 border-b-red-500">Software Developer</span>
 		</h1>
 
 		<div class="flex items-center space-x-4">
-			<a
-				href="https://github.com/alexchwoj"
-				target="_blank"
-				class="w-12 h-12 bg-white text-black rounded-full hover:ring-2 ring-offset-4 hover:ring-red-500 p-2 hover:text-white transition-all duration-500"
-			>
-				<img src={github} alt="GitHub" />
-			</a>
+			<SocialLink href="https://github.com/alexchwoj" src={github} alt="GitHub" />
 
-			<a
+			<SocialLink
 				href="https://www.linkedin.com/in/alexander-chwojewski/"
-				target="_blank"
-				class="w-12 h-12 bg-white text-black rounded-full hover:ring-2 ring-offset-4 hover:ring-red-500 p-2 hover:text-white transition-all duration-500"
-			>
-				<img src={linkedin} alt="LinkedIn" />
-			</a>
+				src={linkedin}
+				alt="LinkedIn"
+			/>
 		</div>
 	</div>
 </div>
