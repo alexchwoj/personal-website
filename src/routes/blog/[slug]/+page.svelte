@@ -221,7 +221,7 @@
 					<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 						<a
 							href="/blog"
-							class="group inline-flex items-center gap-3 px-8 py-4 bg-red-500 hover:bg-red-600 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25"
+							class="group inline-flex items-center gap-3 px-8 py-4 bg-red-500 hover:bg-red-500 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25"
 						>
 							<ArrowLeft
 								class="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300"

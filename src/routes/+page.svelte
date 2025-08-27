@@ -110,7 +110,7 @@
 			>
 				<a
 					href="/experience"
-					class="group inline-flex items-center gap-3 px-8 py-4 bg-red-500 hover:bg-red-600 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25"
+					class="group inline-flex items-center gap-3 px-8 py-4 bg-red-500 hover:bg-red-500 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25"
 				>
 					<Code class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
 					View My Work

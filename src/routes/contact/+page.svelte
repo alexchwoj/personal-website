@@ -116,7 +116,7 @@
 
 					<a
 						href="mailto:{SITE_CONFIG.email}"
-						class="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg font-medium transition-all duration-200 hover:scale-105 group"
+						class="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-500 text-white rounded-lg font-medium transition-all duration-200 hover:scale-105 group"
 					>
 						<Send class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
 						Send Email
