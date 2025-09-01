@@ -10,6 +10,76 @@
 	import { ArrowLeft, Calendar, Clock, User, Globe, Share2, BookOpen } from 'lucide-svelte';
 	import type { PageData } from './$types';
 
+	import Prism from 'prismjs';
+	import 'prismjs/themes/prism-tomorrow.css';
+	import 'prismjs/components/prism-javascript';
+	import 'prismjs/components/prism-typescript';
+	import 'prismjs/components/prism-css';
+	import 'prismjs/components/prism-python';
+	import 'prismjs/components/prism-bash';
+	import 'prismjs/components/prism-json';
+	import 'prismjs/components/prism-jsx';
+	import 'prismjs/components/prism-tsx';
+
+	Prism.languages.svelte = {
+        'comment': /<!--[\s\S]*?-->/,
+        'script': {
+            pattern: /(<script[^>]*>)[\s\S]*?(?=<\/script>)/i,
+            lookbehind: true,
+            inside: Prism.languages.javascript
+        },
+        'style': {
+            pattern: /(<style[^>]*>)[\s\S]*?(?=<\/style>)/i,
+            lookbehind: true,
+            inside: Prism.languages.css
+        },
+        'svelte-directive': {
+            pattern: /\b(on:|bind:|use:|transition:|in:|out:|animate:|class:|style:)[a-zA-Z0-9_-]+/,
+            alias: 'function'
+        },
+        'svelte-block': {
+            pattern: /\{[#\/]?[a-z]+[^}]*\}/,
+            alias: 'keyword'
+        },
+        'svelte-expression': {
+            pattern: /\{[^}]+\}/,
+            inside: Prism.languages.javascript
+        },
+        'tag': {
+            pattern: /<\/?[a-zA-Z][\w-]*(?:\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+))?)*\s*\/?>/,
+            greedy: true,
+            inside: {
+                'tag': {
+                    pattern: /^<\/?[a-zA-Z][\w-]*/,
+                    inside: {
+                        'punctuation': /^<\/?/,
+                        'namespace': /^[a-zA-Z][\w-]*:/
+                    }
+                },
+                'attr-value': {
+                    pattern: /=\s*(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+)/,
+                    inside: {
+                        'punctuation': [
+                            /^=/,
+                            {
+                                pattern: /^(\s*)["']|["']$/,
+                                lookbehind: true
+                            }
+                        ]
+                    }
+                },
+                'punctuation': /\/?>/,
+                'attr-name': {
+                    pattern: /[a-zA-Z:_][\w.:-]*/,
+                    inside: {
+                        'namespace': /^[a-zA-Z][\w-]*:/
+                    }
+                }
+            }
+        },
+        'entity': /&#?[\da-z]{1,8};/i
+    };
+
 	export let data: PageData;
 
 	const { post, allPosts } = data;
@@ -24,6 +94,10 @@
 
 	onMount(() => {
 		mounted = true;
+
+		setTimeout(() => {
+			Prism.highlightAll();
+		}, 500);
 	});
 
 	function sharePost() {
