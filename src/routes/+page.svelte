@@ -4,7 +4,6 @@
 	import SocialLink from '$lib/components/SocialLink.svelte';
 	import SEO from '$lib/components/SEO.svelte';
 	import { Canvas } from '@threlte/core';
-	import { fly } from 'svelte/transition';
 	import { SOCIAL_LINKS, SITE_CONFIG } from '$lib/constants';
 	import { ChevronDown, Code, Sparkles } from 'lucide-svelte';
 
@@ -38,8 +37,6 @@
 		class={`flex flex-col justify-center items-center relative z-20 select-none ${
 			mounted ? 'animate-in slide-in-from-bottom duration-700' : ''
 		}`}
-		in:fly={{ x: -200, duration: 300, delay: 300 }}
-		out:fly={{ x: 200, duration: 300 }}
 	>
 		<div class="text-center space-y-8 px-4 max-w-4xl mx-auto">
 			<div
