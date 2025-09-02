@@ -15,7 +15,6 @@
 
 	function copyEmail() {
 		navigator.clipboard.writeText(SITE_CONFIG.email);
-		// You could add a toast notification here
 	}
 </script>
 
